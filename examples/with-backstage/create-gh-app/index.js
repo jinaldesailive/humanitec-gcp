@@ -7,7 +7,7 @@ const crypto = require('crypto');
 const fs = require('fs/promises')
 
 const hostname = '127.0.0.1';
-const port = 3000;
+const port = 8080;
 
 const FORM_PAGE = `
 <html>
@@ -38,6 +38,7 @@ const handleIndex = (req, res, GITHUB_ORG_ID) => {
   const encodedOrg = encodeURIComponent(GITHUB_ORG_ID);
   const actionUrl = `https://github.com/organizations/${encodedOrg}/settings/apps/new`;
 
+  console.log("Inside handleIndex");
 
   res.statusCode = 200;
   const manifest = {

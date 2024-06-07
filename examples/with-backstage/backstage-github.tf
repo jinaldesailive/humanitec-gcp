@@ -3,7 +3,7 @@
 locals {
   github_app_credentials_file = "github-app-credentials.json"
   github_app_credentials      = jsondecode(file("${path.module}/${local.github_app_credentials_file}"))
-  github_app_id               = local.github_app_credentials["appId"]
+  github_app_id               = local.github_app_credentials["id"]
   github_app_client_id        = local.github_app_credentials["clientId"]
   github_app_client_secret    = local.github_app_credentials["clientSecret"]
   github_app_private_key      = local.github_app_credentials["privateKey"]

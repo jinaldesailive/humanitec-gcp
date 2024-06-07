@@ -12,3 +12,5 @@ terraform.rc
 *.bkp
 *.dtmp
 .source
+*.pem
+*.plan
